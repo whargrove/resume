@@ -1,0 +1,18 @@
+a {
+	color: #000;
+}
+
+a:hover {
+	color: #999;
+	text-decoration: none;
+}
+
+footer {
+	padding-top: 2em;
+	margin-bottom: 2em;
+	border-top: 1px #D1D1D1 solid;
+}
+
+#diversions {
+	margin-bottom: 2em;
+}
