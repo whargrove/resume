@@ -16,3 +16,12 @@ footer {
 #diversions {
 	margin-bottom: 2em;
 }
+
+.desc h5 {
+	margin-bottom: 0;
+	margin-top: 5px;
+}
+
+.job-desc {
+	margin-top: 10px;
+}

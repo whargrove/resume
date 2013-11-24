@@ -12,7 +12,7 @@
 	<body>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12" id="header">
 					<header>
 					<h1><small>the r&eacute;sum&eacute; of</small><br>
 					Wes Hargrove</h1>
@@ -38,25 +38,56 @@
 					<h2>Profile</h2>
 					<p class="lead">I am a pioneer in a connected world. The volume of information at our fingertips sends us careening in any of several available directions. I have the knowledge and the vision to make sense of the information to enable technology as a compelling agent for progress and learning instead of a simple medium. I am a problem solver, a lifelong learner, and a collaborator determined to turn the noise into something meaningful.</p>
 				</div><!-- .col-md-8 -->
-				<div class="col-md-8">
+				<div class="col-md-8" id="experience">
 					<h2>Experience</h2>
-					<h4 class="pull-left">lynda.com, Inc.</h4><h4 class="pull-right"><em>Carpinteria, CA</em></h4>
-					<div class="clearfix"></div>
-					<h5 class="pull-left">Sales and Technical Engineering Support</h5><h5 class="pull-right"><em>Jan 2013 - current</em></h5>
-					<div class="clearfix"></div>
-					<p>I am the key technical resource for Enterprise Sales. I work closely with Product, Engineering, and Web Operations to ensure a smooth integration with our largest enterprise and academic clients. I manage integration timelines and execute various tasks ranging from taking action on client feedback, advising on implementation decisions, and resolving escalations as they arise.</p>
-					<h4 class="pull-left">Apple, Inc.</h4><h4 class="pull-right"><em>Santa Barbara, CA</em></h4>
-					<div class="clearfix"></div>
-					<h5 class="pull-left">Genius</h5><h5 class="pull-right"><em>Aug 2009 - Jan 2013</em></h5>
-					<div class="clearfix"></div>
-					<p>A skilled expert in promoting all facets of the Apple ecosystem and a master problem-solver.</p>
+					<div class="row">
+						<div class="col-xs-6">
+							<h4>Sales and Technical Engineering Support</h4>
+						</div><!-- .col-md-6 -->
+						<div class="col-xs-6 desc">
+							<h5 class="text-right">lynda.com, Inc.</h5>
+						</div><!-- .col-md-6 -->
+						<div class="col-xs-6 desc">
+							<h5 class="text-right">Jan 2013 - current</h5>
+						</div><!-- .col-md-6 -->
+					</div>
+					<div class="row">
+						<div class="clearfix visible-xs"></div>
+						<div class="col-xs-12 job-desc">
+							<p>I am the key technical resource for Enterprise Sales. I work closely with Product, Engineering, and Web Operations to ensure a smooth integration with our largest enterprise and academic clients. I manage integration timelines and execute various tasks ranging from taking action on client feedback, advising on implementation decisions, and resolving escalations as they arise.</p>
+						</div><!-- .col-md-12 -->
+					</div><!-- Nested row -->
+					<div class="row">
+						<div class="col-xs-6">
+							<h4>Genius</h4>
+						</div><!-- .col-xs-6 -->
+						<div class="col-xs-6 desc">
+							<h5 class="text-right">Apple, Inc.</h5>
+						</div>
+						<div class="col-xs-6 desc">
+							<h5 class="text-right">Aug 2009 - Jan 2013</h5>
+						</div><!-- .col-md-6 -->
+					</div>
+					<div class="row">
+						<div class="clearfix visible-xs"></div>
+						<div class="col-xs-12 job-desc">
+							<p>A skilled expert in promoting all facets of the Apple ecosystem and a master problem-solver.</p>
+						</div><!-- .col-xs-12 -->
+					</div><!-- Nested row -->
 				</div><!-- .col-md-8 -->
-				<div class="col-md-8">
+				<div class="col-md-8" id="education">
 					<h2>Education</h2>
-					<h4 class="pull-left">Westmont College</h4><h4 class="pull-right"><em>Santa Barbara, CA</em></h4>
-					<div class="clearfix"></div>
-					<h5 class="pull-left">Religious Studies</h5><h5 class="pull-right"><em>May 2010</em></h5>
-					<div class="clearfix"></div>
+					<div class="row">
+						<div class="col-xs-6">
+							<h4>Westmont College</h4>
+						</div><!-- col-xs-6 -->
+						<div class="col-xs-6 desc">
+							<h5 class="text-right">Religious Studies</h5>
+						</div><!-- col-xs-6 -->
+						<div class="col-xs-6 desc">
+							<h5 class="text-right">May 2010</h5>
+						</div><!-- col-xs-6 -->
+					</div><!-- Nested row -->
 				</div><!-- .col-md-8 -->
 				<div class="col-md-8" id="diversions">
 					<h2>Diversions</h2>
@@ -76,10 +107,15 @@
 			</div><!-- .row -->
 		</div><!-- .container -->
 	<script type="text/javascript">
-	// Hide #details if viewport is < 768 px wide
-		if ($(window).width() < 768) {
-			$('#details').collapse('hide');
-		};
+		// Hide #details if viewport is < 768 px wide
+		$(window).resize(function() {
+			if ($(window).width() <= 992) {
+				$('#details').collapse('hide');
+			}
+			else if ($(window).width() >= 992) {
+				$('#details').collapse('show');
+			};
+		});
 	</script>
 	</body>
 </html>
