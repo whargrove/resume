@@ -28,7 +28,7 @@
 							<p>Find me:</p>
 							<ul class="fa-ul">
 								<li><a href="http://maps.google.com/?ie=UTF8&hq=&ll=34.4258,-119.7142&z=13"><i class="fa-li fa fa-map-marker fa-lg"></i> Santa Barbara, CA</a></li>
-								<li><a href="http://www.github.com/whargrove"><i class="fa-li fa fa-github fa-lg"></i> whargrove</a></li>
+								<li><a href="http://www.github.com/whargrove"><i class="fa-li fa fa-github-alt fa-lg"></i> whargrove</a></li>
 								<li><a href="http://www.linkedin.com/in/whargrove/"><i class="fa-li fa fa-linkedin fa-lg"></i> LinkedIn</a></li>
 								<li><a href="http://www.twitter.com/whargrove"><i class="fa-li fa fa-twitter fa-lg"></i> @whargrove</a></li>
 								<li><a href="http://weshargrove.com/"><i class="fa-li fa fa-rss fa-lg"></i> weshargrove.com</a></li>
@@ -37,9 +37,9 @@
 				</div><!-- .col-md-4 -->
 				<div class="col-md-8 col-md-pull-4" id="profile">
 					<h2>Profile</h2>
-					<p>I am a pioneer in a connected world. The volume of information at our fingertips sends us careening in any of several available directions. I have the knowledge and the vision to make sense of the information to enable technology as a compelling agent for progress and learning instead of a simple medium. I am a problem solver, a lifelong learner, and a collaborator determined to turn the noise into something meaningful.</p>
+					<p class="lead">I am a pioneer in a connected world. The volume of information at our fingertips sends us careening in any of several available directions. I have the knowledge and the vision to make sense of the information to enable technology as a compelling agent for progress and learning instead of a simple medium. I am a problem solver, a lifelong learner, and a collaborator determined to turn the noise into something meaningful.</p>
 				</div><!-- .col-md-8 -->
-				<div class="col-md-8 col-md-pull-4" id="experience">
+				<div class="col-md-8 col-lg-pull-4" id="experience">
 					<h2>Experience</h2>
 					<div class="row">
 						<div class="col-xs-6">
@@ -118,6 +118,12 @@
 			else if ($(window).width() >= 992) {
 				$('#details').collapse('show');
 			};
+		});
+
+		$('#contact').on('hidden.bs.collapse', function () {
+		  if ($(window).width() >= 1200) {
+		  	$('#experience').removeClass('col-lg-pull-4');
+		  };
 		});
 	</script>
 	</body>
