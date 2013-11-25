@@ -19,27 +19,21 @@
 					</header>
 				</div><!-- .col-md-12 -->
 				<div class="col-md-4 col-md-push-8" id="contact">
-					<a data-toggle="collapse" data-target="#details" href="#"><h2>Contact</h2></a>
+					<a data-toggle="collapse" data-target="#details" href="#"><h2>Contact <i class="fa fa-caret-down" id="contact-caret"></i></h2></a>
 					<div id="details" class="collapse in">
-						<p>Get in touch:</p>
-							<ul class="fa-ul">
-								<li><a href="mailto:wesleyhargrove@gmail.com"><i class="fa-li fa fa-envelope fa-lg"></i> wesleyhargrove@gmail.com</a></li>
-							</ul>
-							<p>Find me:</p>
-							<ul class="fa-ul">
-								<li><a href="http://maps.google.com/?ie=UTF8&hq=&ll=34.4258,-119.7142&z=13"><i class="fa-li fa fa-map-marker fa-lg"></i> Santa Barbara, CA</a></li>
-								<li><a href="http://www.github.com/whargrove"><i class="fa-li fa fa-github-alt fa-lg"></i> whargrove</a></li>
-								<li><a href="http://www.linkedin.com/in/whargrove/"><i class="fa-li fa fa-linkedin fa-lg"></i> LinkedIn</a></li>
-								<li><a href="http://www.twitter.com/whargrove"><i class="fa-li fa fa-twitter fa-lg"></i> @whargrove</a></li>
-								<li><a href="http://weshargrove.com/"><i class="fa-li fa fa-rss fa-lg"></i> weshargrove.com</a></li>
-							</ul>
-						</div>
+						<ul class="fa-ul">
+							<li><a href="mailto:wesleyhargrove@gmail.com"><i class="fa-li fa fa-envelope fa-lg"></i> wesleyhargrove@gmail.com</a></li>
+							<li><a href="http://www.github.com/whargrove"><i class="fa-li fa fa-github-alt fa-lg"></i> whargrove</a></li>
+							<li><a href="http://www.linkedin.com/in/whargrove/"><i class="fa-li fa fa-linkedin fa-lg"></i> LinkedIn</a></li>
+							<li><a href="http://weshargrove.com/"><i class="fa-li fa fa-rss fa-lg"></i> weshargrove.com</a></li>
+						</ul>
+					</div>
 				</div><!-- .col-md-4 -->
 				<div class="col-md-8 col-md-pull-4" id="profile">
 					<h2>Profile</h2>
 					<p class="lead">I am a pioneer in a connected world. The volume of information at our fingertips sends us careening in any of several available directions. I have the knowledge and the vision to make sense of the information to enable technology as a compelling agent for progress and learning instead of a simple medium. I am a problem solver, a lifelong learner, and a collaborator determined to turn the noise into something meaningful.</p>
 				</div><!-- .col-md-8 -->
-				<div class="col-md-8 col-lg-pull-4" id="experience">
+				<div class="col-md-8" id="experience">
 					<h2>Experience</h2>
 					<div class="row">
 						<div class="col-xs-6">
@@ -80,10 +74,10 @@
 					<h2>Education</h2>
 					<div class="row">
 						<div class="col-xs-6">
-							<h4>Westmont College</h4>
+							<h4>B.A. Religious Studies</h4>
 						</div><!-- col-xs-6 -->
 						<div class="col-xs-6 desc">
-							<h5 class="text-right">Religious Studies</h5>
+							<h5 class="text-right">Westmont College</h5>
 						</div><!-- col-xs-6 -->
 						<div class="col-xs-6 desc">
 							<h5 class="text-right">May 2010</h5>
@@ -110,20 +104,23 @@
 	<!-- StatHat page view counter -->
 	<img src="http://api.stathat.com/c?ukey=NTU2OCABnB6pbEoll0BTctZnTj_G&key=MR1O0xHZREAOXJ3-rdtblyAyR0RWTA~~&count=1" style="display:none;" width="1" height="1"/>
 	<script type="text/javascript">
-		// Hide #details if viewport is < 768 px wide
+		// Hide #details if viewport is <= 992 px wide
 		$(window).resize(function() {
 			if ($(window).width() <= 992) {
 				$('#details').collapse('hide');
-			}
-			else if ($(window).width() >= 992) {
+			} else if ($(window).width() >= 992) {
 				$('#details').collapse('show');
 			};
 		});
 
-		$('#contact').on('hidden.bs.collapse', function () {
-		  if ($(window).width() >= 1200) {
-		  	$('#experience').removeClass('col-lg-pull-4');
-		  };
+		// Rotate fa-caret when show.bs.collapse is fired
+		$('#contact').on('show.bs.collapse', function () {
+			$('#contact-caret').addClass('fa-flip-vertical');
+		});
+
+		// Rotate fa-caret when hide.bs.collapse is fired
+		$('#contact').on('hide.bs.collapse', function () {
+			$('#contact-caret').removeClass('fa-flip-vertical');
 		});
 	</script>
 	</body>
