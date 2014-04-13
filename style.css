@@ -4,7 +4,7 @@ a {
 
 a:hover {
 	color: #999;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 footer {
