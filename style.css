@@ -1,38 +1,38 @@
 a {
-	color: #000;
+  color: #000;
 }
 
 a:hover {
-	color: #999;
-	text-decoration: underline;
+  color: #999;
+  text-decoration: underline;
 }
 
 footer {
-	padding-top: 2em;
-	margin-bottom: 2em;
-	border-top: 1px #D1D1D1 solid;
+  padding-top: 2em;
+  margin-bottom: 2em;
+  border-top: 1px #D1D1D1 solid;
 }
 
 #diversions {
-	margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 .desc h5 {
-	margin-bottom: 0;
-	margin-top: 5px;
-	color: #999;
+  margin-bottom: 0;
+  margin-top: 5px;
+  color: #999;
 }
 
 .job-desc {
-	margin-top: 10px;
+  margin-top: 10px;
 }
 
 .container {
-	margin-top: 10px;
+  margin-top: 10px;
 }
 
 .fa-ul li {
-	padding-bottom: 5px;
+  padding-bottom: 5px;
 }
 
 h1,
@@ -53,13 +53,13 @@ h6,
 }
 
 h1 small {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 1.1;
 }
 
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 1.4;
 }
