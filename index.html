@@ -13,7 +13,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-md-12" id="contact">
+        <div class="col-md-6 col-md-offset-3" id="contact">
           <ul class="nav nav-pills" role="tablist">
             <li role="presentation">
               <a href="mailto:wesleyhargrove@gmail.com?Subject=Getting in touch">
@@ -25,7 +25,10 @@
             </li>
             <li role="presentation">
               <a href="http://www.github.com/whargrove">
-                <i class="fa fa-github fa-4x"></i>
+              <span class="fa-stack fa-2x">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github-alt fa-stack-1x fa-inverse"></i>
+              </span>
               </a>
             </li>
             <li role="presentation">
@@ -46,17 +49,17 @@
             </li>
           </ul>
         </div>
-        <div class="col-md-12" id="header">
+        <div class="col-md-8 col-md-offset-2" id="header">
           <header>
           <h1><small>the r&eacute;sum&eacute; of</small><br>
           Wes Hargrove</h1>
           </header>
         </div>
-        <div class="col-md-8" id="profile">
+        <div class="col-md-8 col-md-offset-2" id="profile">
           <h2>Profile</h2>
           <p class="lead">I am a problem solver, a lifelong learner, and a foodie with a strong emphasis on BBQ.</p>
         </div>
-        <div class="col-md-8" id="experience">
+        <div class="col-md-8 col-md-offset-2" id="experience">
           <h2>Experience</h2>
           <div class="row">
             <div class="col-xs-6">
@@ -110,7 +113,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-8" id="education">
+        <div class="col-md-8 col-md-offset-2" id="education">
           <h2>Education</h2>
           <div class="row">
             <div class="col-xs-6">
@@ -124,15 +127,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-8" id="skills">
-          <h2>Skills</h2>
-          <p>Ruby on Rails</p>
-          <p>Git</p>
-          <p>HTML, CSS, Javascript</p>
-          <p>SQL</p>
-          <p>Adobe Illustrator</p>
-        </div>
-        <div class="col-md-8" id="diversions">
+        <div class="col-md-8 col-md-offset-2" id="diversions">
           <h2>Diversions</h2>
           <h4>Photography</h4>
           <p>Capturing the world in a fraction of a second is a powerful medium. Check out my photography at <a href="http://whphoto.co/">whphoto.co</a>.</p>
@@ -149,27 +144,5 @@
         </div>
       </div>
     </div>
-  <!-- StatHat page view counter -->
-  <img src="http://api.stathat.com/c?ukey=NTU2OCABnB6pbEoll0BTctZnTj_G&key=MR1O0xHZREAOXJ3-rdtblyAyR0RWTA~~&count=1" style="display:none;" width="1" height="1"/>
-  <script type="text/javascript">
-    // Hide #details if viewport is <= 992 px wide
-    $(window).resize(function() {
-      if ($(window).width() <= 992) {
-        $('#details').collapse('hide');
-      } else if ($(window).width() >= 992) {
-        $('#details').collapse('show');
-      };
-    });
-
-    // Rotate fa-caret when show.bs.collapse is fired
-    $('#contact').on('show.bs.collapse', function () {
-      $('#contact-caret').addClass('fa-flip-vertical');
-    });
-
-    // Rotate fa-caret when hide.bs.collapse is fired
-    $('#contact').on('hide.bs.collapse', function () {
-      $('#contact-caret').removeClass('fa-flip-vertical');
-    });
-  </script>
   </body>
 </html>
